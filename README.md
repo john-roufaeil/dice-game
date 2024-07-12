@@ -1,7 +1,4 @@
-<div align="center">
-    <img src"./src/assets/images/dice.png" width="200" height="200">
-    <h1>Dice Game<h1>
-</div>
+# Dice Game
 
 ## Description
 

@@ -43,11 +43,13 @@ const updateNumbers = () => {
 
 const endTurn = () => {
     if (turn === 0) {
-        player1.classList.add("active");
-        player2.classList.remove("active");
-    } else {
+        turn = 1;
         player1.classList.remove("active");
         player2.classList.add("active");
+    } else {
+        turn = 0;
+        player1.classList.add("active");
+        player2.classList.remove("active");
     }
 }
 
@@ -55,9 +57,21 @@ const roll = () => {
     const random = Math.floor(Math.random() * 6) + 1;
     diceValue.style.visibility = "visible";
     diceValue.src = `assets/images/${random}.png`;
+    if (random === 1) {
+        players[turn].current = 0;
+        updateNumbers();
+        endTurn();
+    } else {
+        players[turn].current += random;
+        updateNumbers();
+    }
 }
 
 resetBtn.addEventListener("click", function () {
     reset();
     endTurn();
+});
+
+rollBtn.addEventListener("click", function () {
+    roll();
 });

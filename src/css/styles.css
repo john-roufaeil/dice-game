@@ -15,7 +15,7 @@
 body,
 html {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   color: white;
   background: linear-gradient(to bottom right, rgb(0, 0, 155), rgb(146, 17, 146));
 }
@@ -200,6 +200,9 @@ button:hover {
   }
   button img {
     width: 0.7rem;
+  }
+  body {
+    height: 95vh;
   }
 }
 

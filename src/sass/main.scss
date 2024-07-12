@@ -117,12 +117,19 @@ button {
     font-size: 1.2rem;
     border: 3px solid transparent;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin-right: 1rem;
+    }
 
     &:hover {
         border-color: rgba(255, 255, 255, 0.5);
-        color: white;
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.2);
     }
+
 }
 
 #dice-value {
@@ -137,12 +144,22 @@ button {
 }
 
 
-.win {
+#win {
     position: absolute;
     background: radial-gradient(circle at center, blue, purple 100%);
     height: 100vh;
     width: 100vw;
     visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    font-weight: bold;
+    justify-content: space-around;
+
+    button {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -152,7 +169,8 @@ button {
     }
 
     .instructions {
-        height: 40%;
+        height: 35%;
+        font-size: 0.8rem;
     }
 
     .stats {
@@ -189,5 +207,13 @@ button {
         content: "";
         display: block;
         width: 0%;
+    }
+
+    button {
+        font-size: 0.7rem;
+
+        img {
+            width: 0.7rem;
+        }
     }
 }

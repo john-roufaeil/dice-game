@@ -7,7 +7,10 @@ const player2Total = document.getElementById("player2-total-score");
 const resetBtn = document.getElementById("reset");
 const rollBtn = document.getElementById("roll");
 const holdBtn = document.getElementById("hold");
+const againBtn = document.getElementById("again");
 const diceValue = document.getElementById("dice-value");
+const winScreen = document.getElementById("win");
+const winnerText = document.getElementById("winner");
 const players = [
     {
         "current": 0,
@@ -55,7 +58,8 @@ const endTurn = () => {
 }
 
 const win = winner => {
-    console.log("Player ${winner} won!");
+    winScreen.style.visibility = "visible";
+    winnerText.innerHTML = `Player ${winner + 1} won!`
 }
 
 const roll = () => {
@@ -83,6 +87,11 @@ const hold = () => {
     }
 }
 
+const again = () => {
+    winScreen.style.visibility = "hidden";
+    reset();
+}
+
 resetBtn.addEventListener("click", function () {
     reset();
 });
@@ -93,4 +102,8 @@ rollBtn.addEventListener("click", function () {
 
 holdBtn.addEventListener("click", function () {
     hold();
+})
+
+againBtn.addEventListener("click", function () {
+    again();
 })

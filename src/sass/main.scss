@@ -171,7 +171,6 @@ button {
     }
 
     .instructions {
-        height: 35%;
         font-size: 0.8rem;
     }
 
@@ -182,18 +181,17 @@ button {
 
     #player1,
     #player2 {
-        width: 30%;
+        width: 45%;
         font-size: 1rem;
+        height: 70%;
     }
 
     #player1 {
         order: 1;
-        height: 70%;
     }
 
     #player2 {
         order: 2;
-        height: 70%;
     }
 
     .controls {

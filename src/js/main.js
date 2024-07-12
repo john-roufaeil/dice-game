@@ -31,14 +31,15 @@ const reset = () => {
     players[1].total = 0;
     updateNumbers();
     diceValue.style.visibility = "hidden";
-    turn = 0;
+    turn = 1;
+    endTurn();
 }
 
 const updateNumbers = () => {
     player1Current.innerHTML = players[0].current;
     player1Total.innerHTML = players[0].total;
     player2Current.innerHTML = players[1].current;
-    player1Total.innerHTML = players[0].total;
+    player2Total.innerHTML = players[1].total;
 }
 
 const endTurn = () => {
@@ -51,6 +52,10 @@ const endTurn = () => {
         player1.classList.add("active");
         player2.classList.remove("active");
     }
+}
+
+const win = winner => {
+    console.log("Player ${winner} won!");
 }
 
 const roll = () => {
@@ -67,11 +72,25 @@ const roll = () => {
     }
 }
 
+const hold = () => {
+    players[turn].total += players[turn].current;
+    players[turn].current = 0;
+    updateNumbers();
+    if (players[turn].total >= 100) {
+        win(turn);
+    } else {
+        endTurn();
+    }
+}
+
 resetBtn.addEventListener("click", function () {
     reset();
-    endTurn();
 });
 
 rollBtn.addEventListener("click", function () {
     roll();
 });
+
+holdBtn.addEventListener("click", function () {
+    hold();
+})

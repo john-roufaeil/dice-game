@@ -32,6 +32,7 @@ body {
 }
 
 main {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -131,6 +132,54 @@ button:hover {
   border: 5px solid #9ecaed;
   border-color: #9ecaed;
   box-shadow: 0 0 20px #9ecaed;
+}
+
+.win {
+  position: absolute;
+  background: radial-gradient(circle at center, blue, purple 100%);
+  height: 100vh;
+  width: 100vw;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .instructions {
+    height: 40%;
+  }
+  .stats {
+    flex-wrap: wrap;
+    height: 60%;
+  }
+  #player1,
+  #player2 {
+    width: 40%;
+    font-size: 1rem;
+  }
+  #player1 {
+    order: 1;
+    height: 70%;
+  }
+  #player2 {
+    order: 2;
+    height: 70%;
+  }
+  .controls {
+    flex-direction: row;
+    width: 100%;
+    height: 30%;
+    gap: 0.5rem;
+    order: 0;
+    justify-content: space-between;
+  }
+  .controls::after {
+    content: "";
+    display: block;
+    width: 0%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

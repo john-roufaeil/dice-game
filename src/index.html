@@ -31,35 +31,36 @@
             </div>
         </div>
         <div class="stats">
-            <div class="player1">
+            <div id="player1" class="active">
                 <p>Player 1</p>
                 <div class="player1-current">
                     <p>Current</p>
-                    <p id="player1-current-score">0</p>
+                    <p id="player1-current-score"></p>
                 </div>
                 <div class="player1-total">
                     <p>Total</p>
-                    <p id="player1-total-score">0</p>
+                    <p id="player1-total-score"></p>
                 </div>
             </div>
             <div class="controls">
-                <button>RESET</button>
-                <button>ROLL</button>
-                <button>HOLD</button>
+                <button id="reset">RESET</button>
+                <button id="roll">ROLL</button>
+                <button id="hold">HOLD</button>
                 <img src="assets/images/1.png" alt="dice-value" width="50" id="dice-value">
             </div>
-            <div class="player2">
+            <div id="player2">
                 <p>Player 2</p>
                 <div class="player2-current">
                     <p>Current</p>
-                    <p id="player2-current-score">0</p>
+                    <p id="player2-current-score"></p>
                 </div>
                 <div class="player2-total">
                     <p>Total</p>
-                    <p id="player2-total-score">0</p>
+                    <p id="player2-total-score"></p>
                 </div>
             </div>
     </main>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

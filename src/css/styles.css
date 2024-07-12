@@ -59,9 +59,9 @@ main {
   height: 50%;
 }
 
-.player1,
+#player1,
 .controls,
-.player2 {
+#player2 {
   height: 100%;
   padding: 1rem;
   display: flex;
@@ -70,23 +70,23 @@ main {
   align-items: center;
 }
 
-.player1,
-.player2,
+#player1,
+#player2,
 .controls {
   width: 25%;
 }
 
-.player1,
-.player2 {
+#player1,
+#player2 {
   font-size: 1.5rem;
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
 }
-.player1 .player1-current,
-.player1 .player2-current,
-.player2 .player1-current,
-.player2 .player2-current {
+#player1 .player1-current,
+#player1 .player2-current,
+#player2 .player1-current,
+#player2 .player2-current {
   background-color: rgba(255, 255, 255, 0.5);
   width: 70%;
   height: 50%;
@@ -107,7 +107,7 @@ main {
 }
 
 button {
-  width: 100%;
+  width: 70%;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 1rem;
   border-radius: 100px;
@@ -124,6 +124,13 @@ button:hover {
 
 #dice-value {
   visibility: hidden;
+}
+
+#player1.active,
+#player2.active {
+  border: 5px solid #9ecaed;
+  border-color: #9ecaed;
+  box-shadow: 0 0 20px #9ecaed;
 }
 
 /*# sourceMappingURL=styles.css.map */

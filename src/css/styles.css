@@ -119,6 +119,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
 }
 button img {
   margin-right: 1rem;
@@ -154,6 +155,7 @@ button:hover {
 #win button {
   width: 50%;
   margin: 0 auto;
+  color: black;
 }
 
 @media only screen and (max-width: 600px) {

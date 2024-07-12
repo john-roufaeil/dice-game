@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Dice Game</title>
+    <link rel="icon" href="assets/images/dice.png">
+
 </head>
 
 <body>
@@ -16,15 +18,15 @@
                 <img src="assets/images/dice.png" alt="dice" width="50px">
             </div>
             <div class="instruction">
-                <img src="assets/images/1.png" alt="one" width="30px">
+                <img src="assets/images/one.png" alt="one" width="30px">
                 <p>Roll the die as many times as you want!</p>
             </div>
             <div class="instruction">
-                <img src="assets/images/2.png" alt="two" width="30px">
+                <img src="assets/images/two.png" alt="two" width="30px">
                 <p>Hold your current score before "1" is rolled.</p>
             </div>
             <div class="instruction">
-                <img src="assets/images/3.png" alt="three" width="30px">
+                <img src="assets/images/three.png" alt="three" width="30px">
                 <p>Winner must get a total of 100.</p>
             </div>
         </div>
@@ -33,23 +35,28 @@
                 <p>Player 1</p>
                 <div class="player1-current">
                     <p>Current</p>
-                    <p id="player1-current-score"></p>
+                    <p id="player1-current-score">0</p>
                 </div>
                 <div class="player1-total">
                     <p>Total</p>
-                    <p id="player1-total-score"></p>
+                    <p id="player1-total-score">0</p>
                 </div>
             </div>
-            <div class="controls"></div>
+            <div class="controls">
+                <button>RESET</button>
+                <button>ROLL</button>
+                <button>HOLD</button>
+                <img src="assets/images/1.png" alt="dice-value" width="50" id="dice-value">
+            </div>
             <div class="player2">
                 <p>Player 2</p>
                 <div class="player2-current">
                     <p>Current</p>
-                    <p id="player2-current-score"></p>
+                    <p id="player2-current-score">0</p>
                 </div>
                 <div class="player2-total">
                     <p>Total</p>
-                    <p id="player2-total-score"></p>
+                    <p id="player2-total-score">0</p>
                 </div>
             </div>
     </main>

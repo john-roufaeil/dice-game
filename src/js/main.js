@@ -23,26 +23,16 @@ const players = [
 ]
 var turn = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
-    updateNumbers(players)
-});
-
-const reset = () => {
-    players[0].current = 0;
-    players[0].total = 0;
-    players[1].current = 0;
-    players[1].total = 0;
-    updateNumbers();
-    diceValue.style.visibility = "hidden";
-    turn = 1;
-    endTurn();
-}
-
 const updateNumbers = () => {
     player1Current.innerHTML = players[0].current;
     player1Total.innerHTML = players[0].total;
     player2Current.innerHTML = players[1].current;
     player2Total.innerHTML = players[1].total;
+}
+
+const win = winner => {
+    winScreen.style.visibility = "visible";
+    winnerText.innerHTML = `Player ${winner + 1} won!`
 }
 
 const endTurn = () => {
@@ -57,9 +47,15 @@ const endTurn = () => {
     }
 }
 
-const win = winner => {
-    winScreen.style.visibility = "visible";
-    winnerText.innerHTML = `Player ${winner + 1} won!`
+const reset = () => {
+    players[0].current = 0;
+    players[0].total = 0;
+    players[1].current = 0;
+    players[1].total = 0;
+    updateNumbers();
+    diceValue.style.visibility = "hidden";
+    turn = 1;
+    endTurn();
 }
 
 const roll = () => {
@@ -91,6 +87,10 @@ const again = () => {
     winScreen.style.visibility = "hidden";
     reset();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    updateNumbers(players)
+});
 
 resetBtn.addEventListener("click", function () {
     reset();

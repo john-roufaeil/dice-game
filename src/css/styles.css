@@ -100,10 +100,7 @@ main {
   align-items: center;
 }
 
-#player1-current-score,
-#player2-current-score,
-#player1-total-score,
-#player2-total-score {
+[id$=-score] {
   font-size: 2rem;
 }
 
